@@ -40,7 +40,7 @@ phases:
 #     on-failure: ABORT | CONTINUE
      commands:
        - zip -r function.zip .
-       - functionnames = $(aws lambda list-functions --query Functions[].[FunctionName] --output text)
+       - functionnames=$(aws lambda list-functions --query Functions[].[FunctionName] --output text)
        - for name in $functionnames;
          do 
          if [$name == *"LambdaFuction"* ]; then
