@@ -44,31 +44,7 @@ phases:
 artifacts:
   files:
     - '**/*'
-#     - location
-#   name: artifact-name
-#   discard-paths: no | yes
-#   base-directory: location
-#   exclude-paths: excluded paths
-#   enable-symlinks: no | yes
-#   s3-prefix: prefix
-#   secondary-artifacts:
-#     artifactIdentifier:
-#       files:
-#         - location
-#         - location
-#       name: secondary-artifact-name
-#       discard-paths: no | yes
-#       base-directory: location
-#     artifactIdentifier:
-#       files:
-#         - location
-#         - location
-#       discard-paths: no | yes
-#       base-directory: location
-# cache:
-#   paths:
-#     - path
-#     - path
+
 # aws events put-rule --name LambdaRuleName --event-pattern "{\"source\":[\"aws.mediaconvert\"],\"detail-type\":[\"MediaConvert Job State Change\"],\"detail\":{\"status\":[\"COMPLETE\",\"ERROR\"],\"userMetadata\":{\"application\":[\"VOD\"]}}}"
 
 
