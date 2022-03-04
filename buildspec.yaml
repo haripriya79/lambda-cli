@@ -41,28 +41,6 @@ phases:
          fi 
          done
 
-       
-       
-#     finally:
-#       - command
-#       - command
-#   post_build: 
-#     run-as: Linux-user-name
-#     on-failure: ABORT | CONTINUE
-#     commands:
-#       - command
-#       - command
-#     finally:
-#       - command
-#       - command
-# reports:
-#   report-group-name-or-arn:
-#     files:
-#       - location
-#       - location
-#     base-directory: location
-#     discard-paths: no | yes
-#     file-format: report-format
 artifacts:
   files:
     - '**/*'
