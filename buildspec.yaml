@@ -40,15 +40,15 @@ phases:
 #     on-failure: ABORT | CONTINUE
      commands:
        - zip -r function.zip .
-       - functionnames=$(aws lambda list-functions --query Functions[].[FunctionName] --output text)
-       - for name in $functionnames;
+       - FUNC_NAME=$(aws lambda list-functions --query Functions[].[FunctionName] --output text)
+       - for name in $FUNC_NAME;
          do 
          if [$name == *"LambdaFuction"* ]; then
          echo $name;
          aws lambda update-function-code  --function-name  $name  --zip-file fileb://function.zip;
          fi 
          done
-       - echo $functionnames
+       
        
 #     finally:
 #       - command
