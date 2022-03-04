@@ -45,11 +45,10 @@ phases:
        - for name in $FUNC_NAME;
          do echo $name;
          done
-       - for name in $FUNC_NAME;
-       
+       - for name in $FUNC_NAME;       
          do 
          echo function name is $name;
-         if [[ $name == *"LambdaFuction"* ]]; then
+         if [[ $name == *"LambdaFunction"* ]]; then
          echo function name is $name;
          aws lambda update-function-code  --function-name  $name  --zip-file fileb://function.zip;
          fi 
