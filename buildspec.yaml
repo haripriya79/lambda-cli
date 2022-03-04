@@ -25,16 +25,6 @@ phases:
       - pip install awscli
             
 
-#       - command
-#   pre_build:
-#     run-as: Linux-user-name
-#     on-failure: ABORT | CONTINUE
-#     commands:
-#       - command
-#       - command
-#     finally:
-#       - command
-#       - command
   build:
      run-as: root
 #     on-failure: ABORT | CONTINUE
@@ -46,7 +36,7 @@ phases:
          do 
          echo function name is $name;
          if [[ $name == *"LambdaFunction"* ]]; then
-         echo function name is $name;
+         echo function name  $name;
          aws lambda update-function-code  --function-name  $name  --zip-file fileb://function.zip;
          fi 
          done
