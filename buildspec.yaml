@@ -41,6 +41,7 @@ phases:
      commands:
        - zip -r function.zip .
        - FUNC_NAME=$(aws lambda list-functions --query Functions[].[FunctionName] --output text)
+       - echo FUNC_NAME
        - for name in $FUNC_NAME;
          do 
          if [$name == *"LambdaFuction"* ]; then
