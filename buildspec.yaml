@@ -46,7 +46,7 @@ phases:
          do 
          if [[ $name == *"LambdaFuction"* ]]; then
          echo function name is $name;
-         aws lambda update-function-code  --function-name  $name  --zip-file fileb://function.zip
+         aws lambda update-function-code  --function-name  $name  --zip-file fileb://function.zip;
          fi 
          done
        
